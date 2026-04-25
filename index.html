@@ -3,126 +3,250 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GlobalTrade Solutions - Import Export</title>
+    <title>GlobalTrade Solutions - Sports & Surgical | Sialkot Pakistan</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: Arial, sans-serif; background: #fff; color: #333; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         
-        .top-bar { background: #1a1a2e; color: #fff; padding: 8px 0; text-align: center; font-size: 14px; }
-        .navbar { background: #fff; padding: 15px 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 24px; font-weight: bold; color: #1a1a2e; }
+        .top-bar { background: #1a1a2e; color: #fff; padding: 10px 0; text-align: center; font-size: 14px; }
+        .top-bar a { color: #f0a500; text-decoration: none; }
+        .navbar { background: #fff; padding: 15px 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        .logo { font-size: 22px; font-weight: bold; color: #1a1a2e; }
         .logo span { color: #f0a500; }
+        .flag { font-size: 20px; }
         
-        .hero { background: linear-gradient(135deg, #0056b3, #003d80); color: #fff; text-align: center; padding: 80px 20px; }
-        .hero h1 { font-size: 36px; margin-bottom: 15px; }
+        .hero { background: linear-gradient(135deg, #006837, #004d26); color: #fff; text-align: center; padding: 80px 20px; }
+        .hero h1 { font-size: 34px; margin-bottom: 15px; }
         .hero h1 span { color: #f0a500; }
         .hero p { font-size: 18px; margin-bottom: 30px; }
-        .btn { display: inline-block; padding: 14px 30px; border-radius: 50px; font-weight: bold; text-decoration: none; margin: 5px; }
+        .btn { display: inline-block; padding: 14px 30px; border-radius: 50px; font-weight: bold; text-decoration: none; margin: 5px; cursor: pointer; }
         .btn-primary { background: #f0a500; color: #1a1a2e; }
-        .btn-secondary { background: #fff; color: #0056b3; border: 2px solid #fff; }
+        .btn-secondary { background: #fff; color: #006837; border: 2px solid #fff; }
         
-        .stats { background: #f8f9fa; padding: 50px 20px; text-align: center; }
-        .stat-box { display: inline-block; margin: 15px 25px; }
-        .stat-box h3 { font-size: 40px; color: #0056b3; }
+        .stats { background: #f8f9fa; padding: 40px 20px; text-align: center; }
+        .stat-box { display: inline-block; margin: 10px 20px; }
+        .stat-box h3 { font-size: 38px; color: #006837; }
+        .stat-box p { color: #555; }
         
         .section { padding: 60px 20px; text-align: center; }
-        .section h2 { font-size: 32px; margin-bottom: 20px; color: #1a1a2e; }
+        .section h2 { font-size: 30px; margin-bottom: 20px; color: #1a1a2e; }
         .section p { max-width: 700px; margin: 0 auto 30px; font-size: 16px; color: #666; }
         
-        .cat-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
-        .cat-card { background: #f8f9fa; padding: 30px; border-radius: 10px; width: 250px; }
-        .cat-card h3 { color: #0056b3; margin: 10px 0; }
-        .cat-card i { font-size: 40px; color: #f0a500; }
+        .product-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; margin-top: 30px; }
+        .product-card { background: #fff; border-radius: 12px; padding: 25px; width: 280px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-top: 4px solid #006837; text-align: left; }
+        .product-card h3 { color: #006837; margin-bottom: 12px; font-size: 20px; }
+        .product-card ul { list-style: none; padding: 0; }
+        .product-card ul li { padding: 6px 0; color: #555; border-bottom: 1px dotted #eee; }
+        .product-card .icon { font-size: 45px; display: block; margin-bottom: 10px; }
         
+        .category-title { font-size: 26px; color: #f0a500; margin: 35px 0 20px; border-bottom: 2px solid #f0a500; display: inline-block; padding-bottom: 5px; }
+        
+        .contact-section { background: #f8f9fa; }
         .contact-form { max-width: 500px; margin: 0 auto; text-align: left; }
         .contact-form input, .contact-form textarea { width: 100%; padding: 12px; margin: 8px 0; border: 1px solid #ddd; border-radius: 8px; font-size: 16px; }
-        .contact-form button { background: #0056b3; color: #fff; border: none; padding: 14px 30px; font-size: 16px; border-radius: 50px; cursor: pointer; width: 100%; font-weight: bold; }
+        .contact-form button { background: #006837; color: #fff; border: none; padding: 14px 30px; font-size: 16px; border-radius: 50px; cursor: pointer; width: 100%; font-weight: bold; }
+        
+        .contact-info { margin-top: 30px; text-align: center; }
+        .contact-info p { font-size: 16px; margin: 8px 0; }
+        .contact-info a { color: #006837; text-decoration: none; font-weight: bold; }
+        
+        .why-us { background: #fff; }
+        .why-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 20px; }
+        .why-card { background: #f8f9fa; padding: 20px; border-radius: 10px; width: 220px; }
+        .why-card .icon { font-size: 35px; }
+        .why-card h4 { color: #006837; margin: 8px 0; }
+        
+        .sialkot-badge { background: #f0a500; color: #1a1a2e; display: inline-block; padding: 10px 25px; border-radius: 50px; font-weight: bold; margin: 20px 0; font-size: 18px; }
         
         footer { background: #1a1a2e; color: #fff; text-align: center; padding: 40px 20px; }
         footer p { margin: 5px 0; }
+        footer a { color: #f0a500; text-decoration: none; }
         
-        .whatsapp-float { position: fixed; bottom: 25px; right: 25px; background: #25D366; color: #fff; width: 60px; height: 60px; border-radius: 50%; text-align: center; line-height: 60px; font-size: 28px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 999; text-decoration: none; }
+        .whatsapp-float { position: fixed; bottom: 25px; right: 25px; background: #25D366; color: #fff; width: 60px; height: 60px; border-radius: 50%; text-align: center; line-height: 60px; font-size: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 999; text-decoration: none; }
     </style>
 </head>
 <body>
 
     <div class="top-bar">
-        📧 info@globaltrade.com &nbsp;|&nbsp; 📞 +1-234-567-8900
+        🇵🇰 Pakistan | Sialkot, Punjab &nbsp;|&nbsp; 📧 <a href="mailto:musamalik6580@gmail.com">musamalik6580@gmail.com</a> &nbsp;|&nbsp; 📞 <a href="tel:+923482103477">+92 348 2103477</a>
     </div>
 
     <div class="navbar">
-        <div class="logo">🌐 GlobalTrade<span>Solutions</span></div>
-        <div>Import & Export</div>
+        <div class="logo">🌐 GlobalTrade<span>Solutions</span> <span class="flag">🇵🇰</span></div>
+        <div><strong>Sports & Surgical</strong> | Sialkot</div>
     </div>
 
     <div class="hero">
-        <h1>Your Gateway to <span>Global Trade</span></h1>
-        <p>Quality Products, Competitive Prices, Worldwide Delivery</p>
-        <a href="#products" class="btn btn-primary">Explore Products</a>
-        <a href="#inquiry" class="btn btn-secondary">Send Inquiry</a>
+        <h1>Premium <span>Sports & Surgical</span> Goods</h1>
+        <p>Exporting World-Class Products from <strong>Sialkot, Pakistan</strong> to 30+ Countries</p>
+        <div class="sialkot-badge">📍 Sialkot — The City of Exports</div>
+        <br>
+        <a href="#products" class="btn btn-primary">View Products</a>
+        <a href="#inquiry" class="btn btn-secondary">Get Quote</a>
     </div>
 
     <div class="stats">
         <div class="stat-box"><h3>500+</h3><p>Shipments</p></div>
         <div class="stat-box"><h3>30+</h3><p>Countries</p></div>
-        <div class="stat-box"><h3>200+</h3><p>Clients</p></div>
+        <div class="stat-box"><h3>200+</h3><p>Happy Clients</p></div>
         <div class="stat-box"><h3>1000+</h3><p>Products</p></div>
     </div>
 
     <div class="section">
         <h2>About Us</h2>
-        <p>GlobalTrade Solutions is a leading import-export company connecting businesses worldwide with premium quality products at the best market prices.</p>
+        <p>Based in <strong>Sialkot, Punjab — Pakistan's export hub</strong> — GlobalTrade Solutions specializes in high-quality <strong>Sports Goods</strong> and <strong>Surgical Instruments</strong>. We source from the finest local manufacturers and deliver worldwide with guaranteed quality and competitive pricing.</p>
+        <div class="sialkot-badge">🏭 Proudly Made in Sialkot, Pakistan</div>
     </div>
 
     <div class="section" id="products" style="background:#f8f9fa;">
         <h2>Our Products</h2>
-        <div class="cat-grid">
-            <div class="cat-card">
-                <i>🌾</i>
-                <h3>Agriculture</h3>
-                <p>Rice, Wheat, Spices, Fruits</p>
+        
+        <div class="category-title">🏅 Sports Goods</div>
+        <div class="product-grid">
+            <div class="product-card">
+                <span class="icon">⚽</span>
+                <h3>Footballs</h3>
+                <ul>
+                    <li>Professional Match Balls</li>
+                    <li>Training Footballs</li>
+                    <li>Futsal Balls</li>
+                    <li>Custom Logo Balls</li>
+                </ul>
             </div>
-            <div class="cat-card">
-                <i>👕</i>
-                <h3>Textiles</h3>
-                <p>Garments, Fabrics, Home Textiles</p>
+            <div class="product-card">
+                <span class="icon">🥊</span>
+                <h3>Boxing Equipment</h3>
+                <ul>
+                    <li>Boxing Gloves</li>
+                    <li>Punching Bags</li>
+                    <li>Head Guards</li>
+                    <li>MMA Training Gear</li>
+                </ul>
             </div>
-            <div class="cat-card">
-                <i>🏭</i>
-                <h3>Industrial</h3>
-                <p>Machinery, Tools, Raw Materials</p>
+            <div class="product-card">
+                <span class="icon">🏏</span>
+                <h3>Cricket Gear</h3>
+                <ul>
+                    <li>Cricket Bats (English Willow)</li>
+                    <li>Batting Gloves</li>
+                    <li>Leg Pads</li>
+                    <li>Helmets</li>
+                </ul>
             </div>
-            <div class="cat-card">
-                <i>💻</i>
-                <h3>Electronics</h3>
-                <p>Consumer Electronics, Components</p>
+            <div class="product-card">
+                <span class="icon">🏋️</span>
+                <h3>Fitness Equipment</h3>
+                <ul>
+                    <li>Dumbbells & Kettlebells</li>
+                    <li>Resistance Bands</li>
+                    <li>Yoga Mats</li>
+                    <li>Jump Ropes</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="category-title">🩺 Surgical Instruments</div>
+        <div class="product-grid">
+            <div class="product-card">
+                <span class="icon">✂️</span>
+                <h3>Surgical Scissors</h3>
+                <ul>
+                    <li>Mayo Scissors</li>
+                    <li>Metzenbaum Scissors</li>
+                    <li>Iris Scissors</li>
+                    <li>Bandage Scissors</li>
+                </ul>
+            </div>
+            <div class="product-card">
+                <span class="icon">🔬</span>
+                <h3>Forceps & Clamps</h3>
+                <ul>
+                    <li>Hemostatic Forceps</li>
+                    <li>Tissue Forceps</li>
+                    <li>Artery Forceps</li>
+                    <li>Needle Holders</li>
+                </ul>
+            </div>
+            <div class="product-card">
+                <span class="icon">🩹</span>
+                <h3>Surgery Tools</h3>
+                <ul>
+                    <li>Scalpels & Blades</li>
+                    <li>Surgical Retractors</li>
+                    <li>Probes & Directors</li>
+                    <li>Surgical Blades</li>
+                </ul>
+            </div>
+            <div class="product-card">
+                <span class="icon">🦷</span>
+                <h3>Dental Instruments</h3>
+                <ul>
+                    <li>Dental Forceps</li>
+                    <li>Elevators</li>
+                    <li>Mirrors & Probes</li>
+                    <li>Extraction Tools</li>
+                </ul>
             </div>
         </div>
     </div>
 
-    <div class="section" id="inquiry">
+    <div class="section why-us">
+        <h2>Why Choose GlobalTrade?</h2>
+        <div class="why-grid">
+            <div class="why-card">
+                <div class="icon">✅</div>
+                <h4>Quality Certified</h4>
+                <p>ISO & CE certified products from Sialkot's best manufacturers</p>
+            </div>
+            <div class="why-card">
+                <div class="icon">🚢</div>
+                <h4>Worldwide Shipping</h4>
+                <p>Fast & reliable delivery to any country</p>
+            </div>
+            <div class="why-card">
+                <div class="icon">💼</div>
+                <h4>Bulk & Wholesale</h4>
+                <p>Best factory-direct wholesale prices</p>
+            </div>
+            <div class="why-card">
+                <div class="icon">🎯</div>
+                <h4>Custom Branding</h4>
+                <p>OEM & custom logo manufacturing available</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section contact-section" id="inquiry">
         <h2>Send Inquiry</h2>
+        <p>Get the best quote within 24 hours — Direct from Sialkot, Pakistan</p>
         <div class="contact-form">
-            <input type="text" placeholder="Your Name">
+            <input type="text" placeholder="Your Full Name">
             <input type="email" placeholder="Email Address">
-            <input type="text" placeholder="Phone Number">
-            <textarea rows="4" placeholder="Your Message / Product Interest"></textarea>
+            <input type="text" placeholder="Phone / WhatsApp Number">
+            <input type="text" placeholder="Product Interested In">
+            <textarea rows="4" placeholder="Your Message or Requirements"></textarea>
             <button>Submit Inquiry</button>
+        </div>
+        <div class="contact-info">
+            <p>📧 <strong>Email:</strong> <a href="mailto:musamalik6580@gmail.com">musamalik6580@gmail.com</a></p>
+            <p>📞 <strong>Phone / WhatsApp:</strong> <a href="tel:+923482103477">+92 348 2103477</a></p>
+            <p>📍 <strong>Location:</strong> Sialkot, Punjab, Pakistan</p>
         </div>
     </div>
 
     <footer>
-        <p><strong>GlobalTrade Solutions</strong></p>
-        <p>📍 123 Trade Street, Business City</p>
-        <p>📧 info@globaltrade.com | 📞 +1-234-567-8900</p>
+        <p><strong>🌐 GlobalTrade Solutions</strong></p>
+        <p>Sports Goods & Surgical Instruments — Import & Export</p>
+        <p>📍 Sialkot, Punjab, Pakistan</p>
+        <p>📧 <a href="mailto:musamalik6580@gmail.com">musamalik6580@gmail.com</a> | 📞 <a href="tel:+923482103477">+92 348 2103477</a></p>
         <br>
         <p>&copy; 2025 GlobalTrade Solutions. All rights reserved.</p>
+        <p>🇵🇰 Proudly Pakistani</p>
     </footer>
 
-    <a href="https://wa.me/12345678900?text=Hello%20GlobalTrade" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/923482103477?text=Hello%20GlobalTrade%20Solutions!%20I'm%20interested%20in%20your%20Sports%20%26%20Surgical%20Products." class="whatsapp-float" target="_blank">
         💬
     </a>
 
 </body>
-  </html>
+                </html>
